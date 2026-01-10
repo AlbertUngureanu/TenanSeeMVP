@@ -61,7 +61,7 @@ This will remove all users, properties, and property images from the database.
 
 Update your frontend `.env` file or set environment variable:
 ```
-VITE_API_URL=http://localhost:3001/api
+VITE_API_URL=http://127.0.0.1:3001/api
 VITE_USE_REAL_BACKEND=true
 ```
 
