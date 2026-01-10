@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="logo">
+        <Link to="/">
           <img src="../images/logo.png" style={{ height: '1em', width: 'auto', verticalAlign: 'middle' }}/>
         </Link>
         <nav className="nav">
