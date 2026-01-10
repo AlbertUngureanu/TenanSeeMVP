@@ -53,7 +53,7 @@ This will remove all users, properties, and property images from the database.
 
 ## 6. Access the API
 
-- API: http://localhost:3001
+- API: http://127.0.0.1:3001
 - Interactive Docs: http://localhost:3001/docs
 - Alternative Docs: http://localhost:3001/redoc
 

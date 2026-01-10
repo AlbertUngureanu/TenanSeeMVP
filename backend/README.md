@@ -52,7 +52,7 @@ uvicorn main:app --reload --port 3001
 ```
 
 The API will be available at:
-- API: http://localhost:3001
+- API: http://127.0.0.1:3001
 - API Documentation: http://localhost:3001/docs
 - Alternative docs: http://localhost:3001/redoc
 
