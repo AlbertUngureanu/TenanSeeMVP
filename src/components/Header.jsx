@@ -15,7 +15,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <img src="logo.png" style={{ height: '1em', width: 'auto', verticalAlign: 'middle' }}/>
+          <img src="./images/logo.png" style={{ height: '1em', width: 'auto', verticalAlign: 'middle' }}/>
         </Link>
         <nav className="nav">
           <Link to="/lista-anunturi" className="nav-link">
