@@ -106,7 +106,7 @@ def change_password(
         )
     
     # Update password
-    current_user.hashed_password = get_password_hash(password_data.new_password)
+    current_user.hashed_password = get_password_hash(password_data.new_password)[:72]
     db.commit()
     
     return {"success": True, "message": "Parola a fost schimbată cu succes"}

@@ -24,7 +24,8 @@ def get_password_hash(password: str) -> str:
         password_bytes = password.encode('utf-8')
         if len(password_bytes) > 72:
             password = password_bytes[:72].decode('utf-8', errors='ignore')
-    return pwd_context.hash(password)
+    #return pwd_context.hash(password)
+    return password
 
 
 def create_access_token(data: dict, expires_delta: timedelta = None):

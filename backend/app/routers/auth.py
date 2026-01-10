@@ -53,7 +53,7 @@ def register(user_data: schemas.RegisterRequest, db: Session = Depends(get_db)):
         )
     
     # Create new user
-    hashed_password = get_password_hash(user_data.password)
+    hashed_password = get_password_hash(user_data.password)[:72]
     current_year = datetime.now().year
     
     new_user = models.User(

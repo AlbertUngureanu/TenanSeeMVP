@@ -27,7 +27,7 @@ try:
     user1 = User(
         name="Ion Popescu",
         email="ion.popescu@example.com",
-        hashed_password=get_password_hash("password123"),
+        hashed_password="password123",
         role="owner",
         is_verified=True,
         account_created_year=2020,
@@ -37,7 +37,7 @@ try:
     user2 = User(
         name="Maria Ionescu",
         email="maria.ionescu@example.com",
-        hashed_password=get_password_hash("password123"),
+        hashed_password="password123",
         role="buyer",
         is_verified=True,
         account_created_year=2019,
@@ -47,7 +47,7 @@ try:
     user3 = User(
         name="Andrei Marin",
         email="andrei.marin@example.com",
-        hashed_password=get_password_hash("password123"),
+        hashed_password="password123",
         role="buyer",
         is_verified=True,
         account_created_year=2020,
@@ -57,7 +57,7 @@ try:
     user4 = User(
         name="Alexandra Popescu",
         email="alexandra.popescu@example.com",
-        hashed_password=get_password_hash("password123"),
+        hashed_password="password123",
         role="owner",
         is_verified=True,
         account_created_year=2020,
