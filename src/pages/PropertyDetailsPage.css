@@ -1,0 +1,97 @@
+.property-details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.property-details-container {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.back-button:hover {
+  background: #333;
+  color: #ffffff;
+}
+
+.property-details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.property-images-column {
+  position: sticky;
+  top: 2rem;
+}
+
+.property-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.loading-container,
+.error-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading-container p,
+.error-container p {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 968px) {
+  .property-details-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .property-images-column {
+    position: static;
+  }
+
+  .property-details-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .back-button-container {
+    margin-bottom: 1rem;
+  }
+
+  .back-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+

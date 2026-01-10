@@ -1,0 +1,158 @@
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: #0066cc;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #0066cc;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0066cc;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.login-button {
+  padding: 0.625rem 1.5rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.login-button:hover {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.header-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.create-property-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0066cc;
+  border-radius: 6px;
+}
+
+.create-property-link:hover {
+  background: #0066cc;
+  color: #ffffff;
+}
+
+.profile-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.profile-link:hover {
+  color: #0066cc;
+}
+
+.logout-button {
+  padding: 0.625rem 1.5rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.logout-button:hover {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .login-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+

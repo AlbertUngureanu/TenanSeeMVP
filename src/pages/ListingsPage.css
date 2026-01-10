@@ -1,0 +1,76 @@
+.listings-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.listings-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.listings-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.no-listings {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.no-listings p {
+  font-size: 1.125rem;
+  color: #666;
+}
+
+@media (max-width: 968px) {
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .listings-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .listings-content {
+    padding: 1rem;
+  }
+
+  .listings-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+

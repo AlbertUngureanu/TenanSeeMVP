@@ -1,0 +1,140 @@
+.search-filters {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.filters-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.price-filter {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  min-width: 150px;
+}
+
+.price-filter:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.filter-checkboxes {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #0066cc;
+}
+
+.checkbox-label span {
+  white-space: nowrap;
+}
+
+.apply-filters-btn,
+.map-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.apply-filters-btn {
+  background: #333;
+  color: #ffffff;
+}
+
+.apply-filters-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.map-btn {
+  background: transparent;
+  color: #333;
+}
+
+.map-btn:hover {
+  background: #333;
+  color: #ffffff;
+}
+
+@media (max-width: 968px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input,
+  .price-filter {
+    width: 100%;
+  }
+
+  .filter-checkboxes {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .apply-filters-btn,
+  .map-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-filters {
+    padding: 1rem;
+  }
+
+  .filter-checkboxes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
