@@ -35,12 +35,13 @@ function ImageGallery({ property }) {
   )
   
 
-  const allImagess = Array.from({ length: 10 }, (_, i) => require(`./images/anunturi/poza${i + 1}.jpg`) );
+  const imageModules = import.meta.glob('../assets/images/poza*.jpg', { eager: true });
+  const allImagess = Object.values(imageModules).map(mod => mod.default);
   const getRandomImages = (images, count) => {
     const shuffled = [...images].sort(() => 0.5 - Math.random()); 
     return shuffled.slice(0, count); 
   };
-  const secondaryImages = getRandomImages(allImages, 3);
+  const secondaryImages = getRandomImages(allImagess, 3);
 
   return (
     <div className="image-gallery">
