@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './ImageGallery.css'
+import thumbnail from './images/anunturi/apartament1.jpg';
 
 function ImageGallery({ images = [] }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
@@ -18,6 +19,16 @@ function ImageGallery({ images = [] }) {
         <line x1="0" y1="0" x2="400" y2="300" stroke="#999" strokeWidth="2"/>
         <line x1="400" y1="0" x2="0" y2="300" stroke="#999" strokeWidth="2"/>
       </svg>
+    </div>
+  )
+
+  const ThumbnailPlaceholder = ({ className = '' }) => (
+    <div className={`image-placeholder ${className}`}>
+      <img 
+        src={thumbnail}
+        alt="TenanSee Logo" 
+        className="image"
+      />
     </div>
   )
 
@@ -64,7 +75,7 @@ function ImageGallery({ images = [] }) {
               {image ? (
                 <img src={image} alt={`Property thumbnail ${index + 5}`} />
               ) : (
-                <ImagePlaceholder />
+                <ThumbnailPlaceholder />
               )}
             </div>
           ))}
