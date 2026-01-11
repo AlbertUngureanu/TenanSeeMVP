@@ -22,7 +22,7 @@ function PropertyCard({ property, onClick }) {
         ) : (
           <div className="image-placeholder">
             <img 
-              src={imageList[id].default}
+              src={imageList[id-1].default}
               alt="Property thumbnail" 
               className="image"
             />
