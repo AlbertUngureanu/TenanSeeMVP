@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
-import logo from '../images/logo.png';
+import logo from './images/logo.png';
 import './Hero.css'
 
 function Hero({ stats }) {
