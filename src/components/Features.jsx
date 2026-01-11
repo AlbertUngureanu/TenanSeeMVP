@@ -2,12 +2,12 @@ import './Features.css'
 
 const features = [
   {
-    icon: '✓',
+    icon: '🛡️',
     title: 'Anunțuri verificate',
-    description: 'Doar proprietarii verificați pot publica anunțuri 100% autentice'
+    description: 'Doar proprietarii verificați pot publica anunțuri 100% autentice.'
   },
   {
-    icon: '👤',
+    icon: '🙍🏻‍♂️',
     title: 'Profiluri de utilizator',
     description: 'Profiluri de utilizator clare, cu istoricul închirierilor și recenzii.'
   },
@@ -19,7 +19,7 @@ const features = [
   {
     icon: '📅',
     title: 'Programare vizionări',
-    description: 'Arrange property visits in one click from the listing page.'
+    description: 'Programați vizionări dintr-un singur click chiar din pagina anunțului.'
   }
 ]
 
