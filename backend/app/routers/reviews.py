@@ -62,11 +62,11 @@ def create_review(
 ):
     """Create a review for an owner (only buyers who visited can review)"""
     # Only buyers can create reviews
-    if current_user.role != "buyer":
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Doar cumpărătorii pot adăuga recenzii"
-        )
+    # if current_user.role != "buyer":
+    #     raise HTTPException(
+    #         status_code=status.HTTP_403_FORBIDDEN,
+    #         detail="Doar cumpărătorii pot adăuga recenzii"
+    #     )
     
     # Verify owner exists
     owner = db.query(models.User).filter(models.User.id == review_data.owner_id).first()
