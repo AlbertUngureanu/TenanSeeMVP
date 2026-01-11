@@ -5,6 +5,8 @@ import PropertyCard from '../components/PropertyCard'
 import ReviewsList from '../components/ReviewsList'
 import { apiService } from '../services/apiService'
 import './OwnerProfilePage.css'
+import l1 from './images/anunturi/lanlord1.jpg';
+import l2 from './images/anunturi/landlord2.jpg';
 
 function OwnerProfilePage() {
   const { ownerId } = useParams()
@@ -90,6 +92,8 @@ function OwnerProfilePage() {
     )
   }
 
+  const pic = owner.name == "Alexandra Popescu" ? l2 : l1;
+  
   return (
     <div className="owner-profile-page">
       <Header />
@@ -103,17 +107,7 @@ function OwnerProfilePage() {
         {/* Owner Header Section */}
         <div className="owner-header">
           <div className="owner-avatar">
-            {owner?.profile_image ? (
-              <img src={owner.profile_image} alt={owner.name || 'Owner'} />
-            ) : (
-              <div className="owner-avatar-placeholder">
-                <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100" height="100" fill="#f5f5f5" stroke="#ddd" strokeWidth="2"/>
-                  <line x1="0" y1="0" x2="100" y2="100" stroke="#999" strokeWidth="2"/>
-                  <line x1="100" y1="0" x2="0" y2="100" stroke="#999" strokeWidth="2"/>
-                </svg>
-              </div>
-            )}
+              <img src={pic} alt={owner.name || 'Owner'} />
           </div>
           <div className="owner-header-info">
             <h1 className="owner-name">{owner?.name || 'Proprietar'}</h1>
