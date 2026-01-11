@@ -77,8 +77,8 @@ try:
     # Create sample properties
     properties_data = [
         {
-            "title": "Apartament modern cu 8 camere",
-            "description": "Apartament modern cu 8 camere în centrul orașului, mobilat complet, cu vedere la parcul central.",
+            "title": "Apartament modern cu 2 camere",
+            "description": "Apartament modern cu 2 camere în centrul orașului, mobilat complet, cu vedere la parcul central.",
             "address": "Strada Calea Victoriei nr. 10, Sector 1, București",
             "location": "București",
             "price": 1200,
