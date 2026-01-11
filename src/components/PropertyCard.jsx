@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import './PropertyCard.css'
-import thumbnail from './images/anunturi/apartament1.jpg';
 
 function PropertyCard({ property, onClick }) {
   const { id, price, description, image, images } = property
@@ -12,6 +11,9 @@ function PropertyCard({ property, onClick }) {
     }
   }
 
+  const imagess = import.meta.glob('./images/anunturi/*.jpg', { eager: true });
+  const imageList = Object.values(imagess);
+
   return (
     <div className="property-card" onClick={handleClick} style={{ cursor: onClick ? 'pointer' : 'default' }}>
       <div className="property-image">
@@ -20,7 +22,7 @@ function PropertyCard({ property, onClick }) {
         ) : (
           <div className="image-placeholder">
             <img 
-              src={thumbnail}
+              src={imageList[id].default}
               alt="Property thumbnail" 
               className="image"
             />
