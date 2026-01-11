@@ -16,6 +16,9 @@ function OwnerProfilePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  
+  const pic = name == "Alexandra Popescu" ? l2 : l1;
+
   useEffect(() => {
     if (ownerId) {
       loadOwnerProfile()
@@ -92,8 +95,7 @@ function OwnerProfilePage() {
     )
   }
 
-  const pic = owner.name == "Alexandra Popescu" ? l2 : l1;
-  
+
   return (
     <div className="owner-profile-page">
       <Header />
