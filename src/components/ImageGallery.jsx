@@ -35,7 +35,7 @@ function ImageGallery({ property }) {
   )
   
 
-  const imageModules = import.meta.glob('../assets/images/poza*.jpg', { eager: true });
+  const imageModules = import.meta.glob('./images/anunturi/poza*.jpg', { eager: true });
   const allImagess = Object.values(imageModules).map(mod => mod.default);
   const getRandomImages = (images, count) => {
     const shuffled = [...images].sort(() => 0.5 - Math.random()); 
