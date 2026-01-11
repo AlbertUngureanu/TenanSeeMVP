@@ -107,7 +107,7 @@ function OwnerProfilePage() {
         {/* Owner Header Section */}
         <div className="owner-header">
           <div className="owner-avatar">
-              <img src={owner?.name == "Alexandra Popescu" ? l2 : l1} alt={owner.name || 'Owner'} />
+              <img src={owner?.name == "Alexandra Popescu" ? l2 : l1} alt={owner?.name || 'Owner'} />
           </div>
           <div className="owner-header-info">
             <h1 className="owner-name">{owner?.name || 'Proprietar'}</h1>
