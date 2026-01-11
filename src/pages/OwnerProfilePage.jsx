@@ -5,8 +5,9 @@ import PropertyCard from '../components/PropertyCard'
 import ReviewsList from '../components/ReviewsList'
 import { apiService } from '../services/apiService'
 import './OwnerProfilePage.css'
-import l1 from './images/anunturi/lanlord1.jpg';
-import l2 from './images/anunturi/landlord2.jpg';
+import l1 from '../components/images/anunturi/lanlord1.jpg';
+import l2 from '../components/images/anunturi/landlord2.jpg';
+'../'
 
 function OwnerProfilePage() {
   const { ownerId } = useParams()
