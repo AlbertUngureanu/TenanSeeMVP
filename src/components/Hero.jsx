@@ -8,8 +8,11 @@ function Hero({ stats }) {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Transparență și încredere între{' '}
-            <span className="hero-title-emphasis">chiriași și proprietari</span>
+            <em>Transparență și încredere</em>
+            <br />
+            între
+            <br />
+            <em>chiriași și proprietari</em>
           </h1>
           <p className="hero-description">
             Răsfoiește anunțurile, discută în siguranță și programează vizionări. 
