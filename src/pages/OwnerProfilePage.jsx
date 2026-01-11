@@ -115,7 +115,7 @@ function OwnerProfilePage() {
             <h1 className="owner-name">{owner?.name || 'Proprietar'}</h1>
             {owner?.account_created_year && (
               <p className="owner-account-year">
-                Cont creat în {owner.account_created_year}
+                Cont creat în 2026
               </p>
             )}
             {owner?.profile_description && (

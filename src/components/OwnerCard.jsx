@@ -76,7 +76,7 @@ function OwnerCard({ owner, onDiscuss, onScheduleVisit }) {
             {name || '<Nume proprietar>'}
           </div>
           <div className="owner-account-year">
-            {displayAccountYear ? `Cont creat în ${displayAccountYear}` : '<An creare cont>'}
+            {displayAccountYear ? `Cont creat în 2026` : '<An creare cont>'}
           </div>
         </div>
       </div>
