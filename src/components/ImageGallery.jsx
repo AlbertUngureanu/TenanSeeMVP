@@ -2,7 +2,9 @@ import { useState } from 'react'
 import './ImageGallery.css'
 import thumbnail from './images/anunturi/apartament1.jpg';
 
-function ImageGallery({ images = [] }) {
+function ImageGallery({ property }) {
+  
+  const { id, price, description, image, images } = property
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
 
   // Ensure we have at least placeholder images
@@ -11,26 +13,30 @@ function ImageGallery({ images = [] }) {
   const mainImage = allImages[0] || null
   const secondaryImages = allImages.slice(1, 4)
   const thumbnailImages = allImages.slice(4, 10)
+  const imagess = import.meta.glob('./images/anunturi/*.jpg', { eager: true });
+  const imageList = Object.values(imagess);
 
   const ImagePlaceholder = ({ className = '' }) => (
     <div className={`image-placeholder ${className}`}>
-      <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="300" fill="#f5f5f5" stroke="#ddd" strokeWidth="2"/>
-        <line x1="0" y1="0" x2="400" y2="300" stroke="#999" strokeWidth="2"/>
-        <line x1="400" y1="0" x2="0" y2="300" stroke="#999" strokeWidth="2"/>
-      </svg>
+      <img 
+        src={imageList[id-1].default}
+        alt="Property thumbnail" 
+        className="image"
+      />
     </div>
   )
 
   const ThumbnailPlaceholder = ({ className = '' }) => (
     <div className={`image-placeholder ${className}`}>
       <img 
-        src={thumbnail}
-        alt="TenanSee Logo" 
+        src={imageList[id-1].default}
+        alt="Property thumbnail" 
         className="image"
       />
     </div>
   )
+  
+
 
   return (
     <div className="image-gallery">
@@ -42,7 +48,7 @@ function ImageGallery({ images = [] }) {
             onClick={() => setSelectedImageIndex(0)}
           />
         ) : (
-          <ImagePlaceholder />
+          <ThumbnailPlaceholder />
         )}
       </div>
 

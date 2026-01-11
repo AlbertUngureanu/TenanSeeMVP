@@ -95,7 +95,7 @@ function PropertyDetailsPage() {
 
         <div className="property-details-content">
           <div className="property-images-column">
-            <ImageGallery images={property.images} />
+            <ImageGallery property={property} />
           </div>
 
           <div className="property-info-column">
