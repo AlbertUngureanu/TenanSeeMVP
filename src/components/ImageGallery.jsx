@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './ImageGallery.css'
-import thumbnail from './images/anunturi/apartament1.jpg';
 
 function ImageGallery({ property }) {
   
@@ -11,7 +10,6 @@ function ImageGallery({ property }) {
   const allImages = images.length > 0 ? images : Array(10).fill(null)
 
   const mainImage = allImages[0] || null
-  const secondaryImages = allImages.slice(1, 4)
   const thumbnailImages = allImages.slice(4, 10)
   const imagess = import.meta.glob('./images/anunturi/*.jpg', { eager: true });
   const imageList = Object.values(imagess);
@@ -37,6 +35,12 @@ function ImageGallery({ property }) {
   )
   
 
+  const allImagess = Array.from({ length: 10 }, (_, i) => require(`./images/anunturi/poza${i + 1}.jpg`) );
+  const getRandomImages = (images, count) => {
+    const shuffled = [...images].sort(() => 0.5 - Math.random()); 
+    return shuffled.slice(0, count); 
+  };
+  const secondaryImages = getRandomImages(allImages, 3);
 
   return (
     <div className="image-gallery">
