@@ -69,24 +69,6 @@ function ImageGallery({ property }) {
           ))}
         </div>
       )}
-
-      {thumbnailImages.length > 0 && (
-        <div className="thumbnail-gallery">
-          {thumbnailImages.map((image, index) => (
-            <div 
-              key={index + 4} 
-              className="thumbnail-image"
-              onClick={() => setSelectedImageIndex(index + 4)}
-            >
-              {image ? (
-                <img src={image} alt={`Property thumbnail ${index + 5}`} />
-              ) : (
-                <ThumbnailPlaceholder />
-              )}
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   )
 }
