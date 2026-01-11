@@ -1,4 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
+import logo from '../images/logo.png';
 import './Hero.css'
 
 function Hero({ stats }) {
@@ -21,7 +22,7 @@ function Hero({ stats }) {
         <div className="hero-image">
           <div className="image-placeholder">
             <img 
-              src="logo.png" 
+              src={logo}
               alt="TenanSee Logo" 
               className="image"
             />
