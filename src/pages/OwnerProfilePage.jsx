@@ -17,7 +17,7 @@ function OwnerProfilePage() {
   const [error, setError] = useState(null)
 
   
-  const pic = name == "Alexandra Popescu" ? l2 : l1;
+  const pic = owner?.name == "Alexandra Popescu" ? l2 : l1;
 
   useEffect(() => {
     if (ownerId) {
