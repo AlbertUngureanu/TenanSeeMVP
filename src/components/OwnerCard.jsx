@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { apiService } from '../services/apiService'
 import './OwnerCard.css'
+import l1 from './images/anunturi/lanlord1.jpg';
+import l2 from './images/anunturi/landlord2.jpg';
 
 function OwnerCard({ owner, onDiscuss, onScheduleVisit }) {
   const navigate = useNavigate()
@@ -19,7 +21,7 @@ function OwnerCard({ owner, onDiscuss, onScheduleVisit }) {
   // Support both snake_case (from backend) and camelCase
   const displayAccountYear = account_created_year || accountCreatedYear
   const displayProfileDescription = profile_description || profileDescription
-  const displayProfileImage = profile_image || profileImage
+  const displayProfileImage = name == "Alexandra Popescu" ? l2 : l1
   
   const [rating, setRating] = useState(0)
   const [totalReviews, setTotalReviews] = useState(0)
